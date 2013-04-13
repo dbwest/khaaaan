@@ -31,7 +31,6 @@ class KhanStats
 
     def khan_count num
         @google_page.navigate_to("http://google.com/#q=" + khan_string(num))
-        sleep 1
         results = @google_page.result_stats
         results.split(" ")[1].delete(",").to_i
     end
@@ -43,16 +42,17 @@ end
 
     
 get '/khan' do
+    content_type :json
     khan_stats = KhanStats.new
     khan_array = []
     khan_array << ["KHANS", "SHATNERS"]
 
-    2.upto(10) do |i|
-        khan_array << [i, khan_stats.khan_count(i)]
+    5.times do |i|
+        khan_array << [(i+1), khan_stats.khan_count(i+1)]
 
     end
     khan_stats.close
-    "var data = " + khan_array.to_json + ";"
+    khan_array.t
 end
 
 
