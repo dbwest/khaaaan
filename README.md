@@ -5,6 +5,7 @@ http://boingboing.net/2009/01/16/how-many-aaaaas-in-k.html
 
 - `git clone`
 - `bundle`
+- `ruby google_khan_page.rb`
 
 Then visit your sinatra server at localhost:4567/khan
 
