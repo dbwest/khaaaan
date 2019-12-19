@@ -19,7 +19,7 @@ GEM
       watir-webdriver (>= 0.6.2)
     page_navigation (0.7)
       data_magic (>= 0.14)
-    rack (1.5.2)
+    rack (1.6.12)
     rack-protection (1.5.0)
       rack
     rspec (2.13.0)
