@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'rspec'
 gem 'page-object'
-gem 'json'
+gem 'json', '>= 2.3.0'
 gem 'sinatra'
 gem 'watir-webdriver'
